@@ -1,11 +1,13 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Chevron from "./icons/chevron.svg";
 import clsx from "clsx";
 
 interface Option {
   label: string;
+  value: string;
 }
+
 interface DropdownProps {
   options: Option[];
   renderOption: (option: Option) => React.ReactElement;
@@ -22,6 +24,7 @@ const Dropdown = ({
 }: DropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(defaultOption || 0);
+  const ref = useRef<HTMLDivElement>(null);
 
   const handleOpenClick = () => {
     setIsOpen(!isOpen);
@@ -29,11 +32,26 @@ const Dropdown = ({
 
   const handleOptionClick = (option: Option, idx: number) => () => {
     setSelectedOption(idx);
+    setIsOpen(false);
     onOptionClick && onOptionClick(option);
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (ref.current && !ref.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ref]);
+
   return (
-    <div className={clsx("relative", className)}>
+    <div ref={ref} className={clsx("relative", className)}>
       <button className="flex w-full justify-between p-4" onClick={handleOpenClick}>
         {options[selectedOption].label}
         <Chevron
