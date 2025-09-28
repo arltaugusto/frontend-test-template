@@ -12,6 +12,7 @@ const config: Config = {
         "neutral-650": "#585660",
       },
       colors: {
+        "neutral-450": "#EFEDF3",
         "neutral-550": "#EEEEEE",
         "neutral-650": "#585660",
         "neutral-750": "#8F8F8F",
