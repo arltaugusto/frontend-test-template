@@ -1,5 +1,6 @@
 "use client";
 import { Button } from "@/components/atoms/Button";
+import clsx from "clsx";
 import Image from "next/image";
 
 type GameProps = {
@@ -13,11 +14,14 @@ type GameProps = {
 
 interface GameCardProps<T extends GameProps> {
   game: T;
+  className?: string;
 }
 
-function GameCard<T extends GameProps>({ game }: GameCardProps<T>) {
+function GameCard<T extends GameProps>({ game, className }: GameCardProps<T>) {
   return (
-    <div className="flex flex-col gap-y-5 rounded-2xl border border-neutral-750 p-6">
+    <div
+      className={clsx("flex flex-col gap-y-5 rounded-2xl border border-neutral-750 p-6", className)}
+    >
       <div className="relative h-[240px] w-full rounded-t-2xl">
         <Image fill src={game.image} alt={`game-${game.id}-image`} className="rounded-t-2xl" />
       </div>

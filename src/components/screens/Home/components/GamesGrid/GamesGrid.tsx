@@ -5,7 +5,7 @@ import { Spinner } from "@/components/atoms/Spinner";
 import { GameCard } from "@/components/molecules/GameCard";
 import { getGamesByPageAndGenre } from "@/services/game";
 import { Game } from "@/utils/endpoint";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface GameGridProps {
   games: Game[];
@@ -20,6 +20,12 @@ const GamesGrid = ({ games, initialTotalPages, initialCurrentPage, genre }: Game
   const [totalPages, setTotalPages] = useState(initialTotalPages);
   const [currentPage, setCurrentPage] = useState(initialCurrentPage);
 
+  useEffect(() => {
+    setAllGames(games);
+    setTotalPages(initialTotalPages);
+    setCurrentPage(initialCurrentPage);
+  }, [games]);
+
   const handleSeeMoreClick = async () => {
     setIsLoading(true);
     const {
@@ -32,14 +38,19 @@ const GamesGrid = ({ games, initialTotalPages, initialCurrentPage, genre }: Game
     setCurrentPage(responseCurrentPage);
     setIsLoading(false);
   };
+
   return (
     <div className="flex flex-col gap-y-9 2xl:gap-y-12">
-      <div className="flex flex-col gap-y-6 pr-12 2xl:grid 2xl:grid-cols-3 2xl:gap-12">
+      <div className="flex flex-col gap-y-6 2xl:grid 2xl:grid-cols-3 2xl:place-items-center 2xl:gap-12 2xl:pr-12">
         {allGames.map((game) => (
-          <GameCard key={game.id} game={game} />
+          <GameCard
+            key={game.id}
+            game={game}
+            className="2xl:h-full 2xl:min-w-[380px] 2xl:max-w-[380px] 2xl:justify-between"
+          />
         ))}
       </div>
-      {currentPage < totalPages && (
+      {currentPage <= totalPages && (
         <Button
           onClick={handleSeeMoreClick}
           className="w-full uppercase 2xl:max-w-[137px]"

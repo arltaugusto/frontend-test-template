@@ -24,7 +24,11 @@ const TopSellers = () => {
           <Dropdown
             options={genres}
             className="w-56"
-            renderOption={(option) => <Link href={`/?genre=${option.value}`}>{option.label}</Link>}
+            renderOption={(option) => (
+              <Link href={option.value === "all" ? "/" : `/?genre=${option.value}`}>
+                {option.label}
+              </Link>
+            )}
           />
         </div>
       </div>
