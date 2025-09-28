@@ -16,7 +16,7 @@ export default async function Home({ searchParams }: HomeProps) {
     <main className="flex flex-col">
       <TopSellers />
       <div className="px-6 py-8 2xl:px-32">
-        <Suspense fallback={<LoadingSkeletons />}>
+        <Suspense key={genre} fallback={<LoadingSkeletons />}>
           <HomeScreen genre={genre} />
         </Suspense>
       </div>
