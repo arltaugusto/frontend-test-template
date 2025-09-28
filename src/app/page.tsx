@@ -11,10 +11,11 @@ type HomeProps = {
 
 export default async function Home({ searchParams }: HomeProps) {
   const genre = searchParams.genre;
+
   return (
     <main className="flex flex-col">
       <TopSellers />
-      <div className="flex flex-col gap-y-6 px-6 py-8 2xl:grid 2xl:grid-cols-3 2xl:gap-12 2xl:px-32">
+      <div className="px-6 py-8 2xl:px-32">
         <Suspense fallback={<LoadingSkeletons />}>
           <HomeScreen genre={genre} />
         </Suspense>
