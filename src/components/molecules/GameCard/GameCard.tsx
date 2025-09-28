@@ -18,14 +18,8 @@ interface GameCardProps<T extends GameProps> {
 function GameCard<T extends GameProps>({ game }: GameCardProps<T>) {
   return (
     <div className="flex flex-col gap-y-5 rounded-2xl border border-neutral-750 p-6">
-      <div className="w-[279px] rounded-t-2xl">
-        <Image
-          src={game.image}
-          alt={`game-${game.id}-image`}
-          className="rounded-t-2xl"
-          width={279}
-          height={240}
-        />
+      <div className="relative h-[240px] w-full rounded-t-2xl">
+        <Image fill src={game.image} alt={`game-${game.id}-image`} className="rounded-t-2xl" />
       </div>
       <div className="flex flex-col gap-y-3">
         <span className="block text-base font-bold uppercase leading-4 text-neutral-500">
