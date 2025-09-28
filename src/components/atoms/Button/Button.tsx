@@ -10,8 +10,8 @@ interface ButtonProps extends React.ComponentPropsWithoutRef<"button"> {
 }
 
 const VARIANTS: Record<Variant, string> = {
-  primary: "border border-neutral-650 bg-neutral-650",
-  secondary: "border border-neutral-850 box-border text-neutral-850",
+  primary: "border text-white border-neutral-650 bg-neutral-650",
+  secondary: "border  border-neutral-850 box-border text-neutral-850",
 };
 const Button = ({
   children,
