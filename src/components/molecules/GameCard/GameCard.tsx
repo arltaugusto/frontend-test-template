@@ -22,7 +22,7 @@ function GameCard<T extends GameProps>({ game }: GameCardProps<T>) {
         <Image fill src={game.image} alt={`game-${game.id}-image`} className="rounded-t-2xl" />
       </div>
       <div className="flex flex-col gap-y-3">
-        <span className="block text-base font-bold uppercase leading-4 text-neutral-500">
+        <span className="text-base font-bold uppercase leading-4 text-neutral-500">
           {game.genre}
         </span>
         <div className="flex justify-between font-bold text-neutral-850">
@@ -30,7 +30,7 @@ function GameCard<T extends GameProps>({ game }: GameCardProps<T>) {
           <span className="">${game.price}</span>
         </div>
       </div>
-      <Button onClick={() => {}} variant="secondary" className="h-14 uppercase">
+      <Button onClick={() => {}} variant="secondary" className="uppercase">
         Add to cart
       </Button>
     </div>
