@@ -9,7 +9,7 @@ const GamesInCart = () => {
   return (
     <div className="mt-8 2xl:mt-12">
       {Object.values(cart).map((game) => (
-        <CartGameCard game={game} />
+        <CartGameCard key={`${game.id}-cart-item`} game={game} />
       ))}
     </div>
   );
