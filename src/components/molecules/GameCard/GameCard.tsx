@@ -43,8 +43,8 @@ function GameCard({ game, className }: GameCardProps) {
           {game.genre}
         </span>
         <div className="flex justify-between font-bold text-neutral-850">
-          <span className="">{game.name}</span>
-          <span className="">${game.price}</span>
+          <span>{game.name}</span>
+          <span>${game.price}</span>
         </div>
       </div>
       <Button
