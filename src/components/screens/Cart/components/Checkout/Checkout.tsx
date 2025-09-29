@@ -16,7 +16,7 @@ const Checkout = () => {
         </div>
         <div className="flex flex-col gap-y-3 border-b border-neutral-750 py-5">
           {Object.values(cart).map((game) => (
-            <div className="flex w-full items-center justify-between">
+            <div key={`${game.id}-list-item`} className="flex w-full items-center justify-between">
               <span className="font-base text-850 leading-6">{game.name}</span>
               <span className="font-base text-850 leading-6">${game.price}</span>
             </div>
