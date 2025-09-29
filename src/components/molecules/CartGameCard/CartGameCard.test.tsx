@@ -1,0 +1,27 @@
+import { render, screen } from "@testing-library/react";
+import { CartGameCard } from "./CartGameCard";
+import { allGames } from "@/utils/endpoint";
+import userEvent from "@testing-library/user-event";
+import { useCartContext } from "@/contexts/CartContext";
+
+jest.mock("@/contexts/CartContext", () => ({
+  useCartContext: jest.fn(),
+}));
+const mockGame = allGames[0];
+describe("CartGameCard", () => {
+  it("should call removeItem callback on x button click", async () => {
+    const removeItemMock = jest.fn();
+    jest.mocked(useCartContext).mockReturnValue({
+      cart: {},
+      removeItem: removeItemMock,
+      addItem: jest.fn(),
+    });
+    render(<CartGameCard game={mockGame} />);
+
+    const button = screen.getByRole("button");
+
+    await userEvent.click(button);
+
+    expect(removeItemMock).toHaveBeenCalled();
+  });
+});
