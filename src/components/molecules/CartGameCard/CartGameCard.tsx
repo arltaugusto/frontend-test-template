@@ -1,7 +1,8 @@
+import { useCartContext } from "@/contexts/CartContext";
 import { Game } from "@/utils/endpoint";
 import Image from "next/image";
+
 import X from "./icons/x.svg";
-import { useCartContext } from "@/contexts/CartContext";
 
 interface CartGameCardProps {
   game: Game;

@@ -1,4 +1,5 @@
 import { getGamesByPageAndGenre } from "@/services/game";
+
 import { GamesGrid } from "./components/GamesGrid";
 
 interface HomeScreenProps {

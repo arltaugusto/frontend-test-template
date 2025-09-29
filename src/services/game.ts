@@ -1,4 +1,5 @@
 "use server";
+
 import { allGames, delay } from "@/utils/endpoint";
 
 const ITEMS_PER_PAGE = 12;

@@ -1,4 +1,5 @@
 import { allGames } from "@/utils/endpoint";
+
 import { getGamesByPageAndGenre } from "./game";
 
 describe("game service", () => {

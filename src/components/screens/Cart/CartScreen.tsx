@@ -1,10 +1,11 @@
 "use client";
 
-import Link from "next/link";
-import LeftArrow from "./icons/arrow-left.svg";
 import { useCartContext } from "@/contexts/CartContext";
-import { GamesInCart } from "./components/GamesInCart";
+import Link from "next/link";
+
 import { Checkout } from "./components/Checkout";
+import { GamesInCart } from "./components/GamesInCart";
+import LeftArrow from "./icons/arrow-left.svg";
 
 const CartScreen = () => {
   const { cart } = useCartContext();

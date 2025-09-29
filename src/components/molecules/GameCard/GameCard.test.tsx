@@ -1,8 +1,9 @@
+import { useCartContext } from "@/contexts/CartContext";
 import { allGames } from "@/utils/endpoint";
 import { render, screen } from "@testing-library/react";
-import { GameCard } from "./GameCard";
-import { useCartContext } from "@/contexts/CartContext";
 import userEvent from "@testing-library/user-event";
+
+import { GameCard } from "./GameCard";
 
 jest.mock("@/contexts/CartContext", () => ({
   useCartContext: jest.fn(),

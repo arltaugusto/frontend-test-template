@@ -24,8 +24,7 @@ export const allGames: Game[] = [
     genre: "RPG",
     image: "/game-images/thewitcher3.jpeg",
     name: "The Witcher 3: Wild Hunt",
-    description:
-      "A story-driven, next-generation open world role-playing game.",
+    description: "A story-driven, next-generation open world role-playing game.",
     price: 39.99,
     isNew: false,
   },
@@ -34,8 +33,7 @@ export const allGames: Game[] = [
     genre: "Adventure",
     image: "/game-images/zeldabotw.jpeg",
     name: "The Legend of Zelda: Breath of the Wild",
-    description:
-      "An epic adventure that breaks boundaries in the Zelda series.",
+    description: "An epic adventure that breaks boundaries in the Zelda series.",
     price: 59.99,
     isNew: true,
   },
@@ -44,8 +42,7 @@ export const allGames: Game[] = [
     genre: "Action",
     image: "/game-images/gta5.jpeg",
     name: "Grand Theft Auto V",
-    description:
-      "An action-adventure game set in the sprawling city of Los Santos.",
+    description: "An action-adventure game set in the sprawling city of Los Santos.",
     price: 29.99,
     isNew: false,
   },
@@ -93,8 +90,7 @@ export const allGames: Game[] = [
     genre: "Sports",
     image: "/game-images/fifa21.jpeg",
     name: "FIFA 21",
-    description:
-      "The latest installment in the world-renowned football simulation series.",
+    description: "The latest installment in the world-renowned football simulation series.",
     price: 59.99,
     isNew: true,
   },
@@ -103,8 +99,7 @@ export const allGames: Game[] = [
     genre: "MMORPG",
     image: "/game-images/worldofwarcraft.jpeg",
     name: "World of Warcraft",
-    description:
-      "A massively multiplayer online role-playing game set in the Warcraft universe.",
+    description: "A massively multiplayer online role-playing game set in the Warcraft universe.",
     price: 14.99,
     isNew: false,
   },
@@ -113,8 +108,7 @@ export const allGames: Game[] = [
     genre: "Puzzle",
     image: "/game-images/portal2.jpeg",
     name: "Portal 2",
-    description:
-      "A puzzle-platform game that challenges you with mind-bending puzzles.",
+    description: "A puzzle-platform game that challenges you with mind-bending puzzles.",
     price: 19.99,
     isNew: false,
   },
@@ -123,8 +117,7 @@ export const allGames: Game[] = [
     genre: "Horror",
     image: "/game-images/residentevil2.jpeg",
     name: "Resident Evil 2",
-    description:
-      "A survival horror game set in the aftermath of a deadly virus outbreak.",
+    description: "A survival horror game set in the aftermath of a deadly virus outbreak.",
     price: 59.99,
     isNew: false,
   },
@@ -133,8 +126,7 @@ export const allGames: Game[] = [
     genre: "Indie",
     image: "/game-images/hollowknight.jpeg",
     name: "Hollow Knight",
-    description:
-      "An action-adventure game set in a beautifully hand-drawn mysterious world.",
+    description: "An action-adventure game set in a beautifully hand-drawn mysterious world.",
     price: 14.99,
     isNew: true,
   },
@@ -143,8 +135,7 @@ export const allGames: Game[] = [
     genre: "Action",
     image: "/game-images/sekiro.jpeg",
     name: "Sekiro: Shadows Die Twice",
-    description:
-      "A game where you seek revenge on your foes in late 1500s Sengoku Japan.",
+    description: "A game where you seek revenge on your foes in late 1500s Sengoku Japan.",
     price: 59.99,
     isNew: true,
   },
@@ -153,8 +144,7 @@ export const allGames: Game[] = [
     genre: "Adventure",
     image: "/game-images/firewatch.jpeg",
     name: "Firewatch",
-    description:
-      "A single-player first-person mystery set in the Wyoming wilderness.",
+    description: "A single-player first-person mystery set in the Wyoming wilderness.",
     price: 19.99,
     isNew: false,
   },
@@ -163,8 +153,7 @@ export const allGames: Game[] = [
     genre: "Action-Adventure",
     image: "/game-images/assassinscreedvalhalla.jpeg",
     name: "Assassin's Creed Valhalla",
-    description:
-      "Live as a legendary Viking warrior raised on tales of battle and glory.",
+    description: "Live as a legendary Viking warrior raised on tales of battle and glory.",
     price: 59.99,
     isNew: true,
   },
@@ -173,8 +162,7 @@ export const allGames: Game[] = [
     genre: "RPG",
     image: "/game-images/finalfantasyxv.jpeg",
     name: "Final Fantasy XV",
-    description:
-      "Embark on an epic journey with your friends to reclaim your homeland.",
+    description: "Embark on an epic journey with your friends to reclaim your homeland.",
     price: 39.99,
     isNew: false,
   },
@@ -183,8 +171,7 @@ export const allGames: Game[] = [
     genre: "Shooter",
     image: "/game-images/callofdutywarzone.jpeg",
     name: "Call of Duty: Warzone",
-    description:
-      "A free-to-play battle royale game where you fight to be the last one standing.",
+    description: "A free-to-play battle royale game where you fight to be the last one standing.",
     price: 77.99,
     isNew: false,
   },
@@ -193,8 +180,7 @@ export const allGames: Game[] = [
     genre: "Strategy",
     image: "/game-images/ageofempiresII.jpeg",
     name: "Age of Empires II: Definitive Edition",
-    description:
-      "A classic strategy game remastered in full HD with new features.",
+    description: "A classic strategy game remastered in full HD with new features.",
     price: 19.99,
     isNew: false,
   },
@@ -223,8 +209,7 @@ export const allGames: Game[] = [
     genre: "Puzzle",
     image: "/game-images/tetris99.jpeg",
     name: "Tetris 99",
-    description:
-      "The iconic puzzle game Tetris with a 99-player battle royale twist.",
+    description: "The iconic puzzle game Tetris with a 99-player battle royale twist.",
     price: 85.99,
     isNew: true,
   },
@@ -233,8 +218,7 @@ export const allGames: Game[] = [
     genre: "Battle Royale",
     image: "/game-images/freefire.jpeg",
     name: "Free Fire",
-    description:
-      "A fast-paced battle royale game where players fight to be the last one standing.",
+    description: "A fast-paced battle royale game where players fight to be the last one standing.",
     price: 60.99,
     isNew: false,
   },
@@ -253,8 +237,7 @@ export const allGames: Game[] = [
     genre: "Adventure",
     image: "/game-images/reddeadredemption2.jpeg",
     name: "Red Dead Redemption 2",
-    description:
-      "An epic tale of life in America at the dawn of the modern age.",
+    description: "An epic tale of life in America at the dawn of the modern age.",
     price: 59.99,
     isNew: true,
   },
@@ -272,8 +255,7 @@ export const allGames: Game[] = [
     genre: "Racing",
     image: "/game-images/mariokar8.jpeg",
     name: "Mario Kart 8 Deluxe",
-    description:
-      "The ultimate version of Mario Kart 8 with more racers, tracks, and features.",
+    description: "The ultimate version of Mario Kart 8 with more racers, tracks, and features.",
     price: 59.99,
     isNew: true,
   },
@@ -291,8 +273,7 @@ export const allGames: Game[] = [
     genre: "MMORPG",
     image: "/game-images/guildwars2.jpeg",
     name: "Guild Wars 2",
-    description:
-      "A living, breathing online world where adventure awaits around every corner.",
+    description: "A living, breathing online world where adventure awaits around every corner.",
     price: 70.0,
     isNew: true,
   },
@@ -301,16 +282,12 @@ export const allGames: Game[] = [
     genre: "Indie",
     image: "/game-images/amongus.jpeg",
     name: "Among Us",
-    description:
-      "An online multiplayer social deduction game set in a space-themed setting.",
+    description: "An online multiplayer social deduction game set in a space-themed setting.",
     price: 45.0,
     isNew: false,
   },
 ];
 
-export const availableFilters = Array.from(
-  new Set(allGames.map((game) => game.genre))
-);
+export const availableFilters = Array.from(new Set(allGames.map((game) => game.genre)));
 
-export const delay = (ms: number) =>
-  new Promise((resolve) => setTimeout(resolve, ms));
+export const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));

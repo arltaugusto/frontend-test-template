@@ -1,8 +1,9 @@
-import { render, screen } from "@testing-library/react";
-import { GamesGrid } from "./GamesGrid";
-import { allGames, type Game } from "@/utils/endpoint";
 import { getGamesByPageAndGenre } from "@/services/game";
+import { type Game, allGames } from "@/utils/endpoint";
+import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+
+import { GamesGrid } from "./GamesGrid";
 
 const someGames = allGames.slice(0, 5);
 jest.mock("@/components/molecules/GameCard", () => ({

@@ -1,7 +1,7 @@
+import { useCartContext } from "@/contexts/CartContext";
+import { allGames } from "@/utils/endpoint";
 import { render, screen } from "@testing-library/react";
 
-import { allGames } from "@/utils/endpoint";
-import { useCartContext } from "@/contexts/CartContext";
 import { CartScreen } from ".";
 
 const mockGame = allGames[0];

@@ -1,4 +1,5 @@
 import Link from "next/link";
+
 import CartIcon from "./icon/Cart.svg";
 
 const Header = () => {

@@ -1,11 +1,11 @@
-import React from "react";
-import type { Metadata } from "next";
-import clsx from "clsx";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import { Footer } from "@/components/organisms/Footer";
 import { Header } from "@/components/organisms/Header";
 import { Providers } from "@/contexts/Providers";
-import { Footer } from "@/components/organisms/Footer";
+import clsx from "clsx";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import React from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 

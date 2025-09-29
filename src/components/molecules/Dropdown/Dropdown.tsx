@@ -1,7 +1,9 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
-import Chevron from "./icons/chevron.svg";
+
 import clsx from "clsx";
+import React, { useEffect, useRef, useState } from "react";
+
+import Chevron from "./icons/chevron.svg";
 
 interface Option {
   label: string;
