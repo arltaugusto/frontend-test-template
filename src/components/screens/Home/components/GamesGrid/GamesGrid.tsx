@@ -28,11 +28,12 @@ const GamesGrid = ({ games, initialTotalPages, initialCurrentPage, genre }: Game
 
   const handleSeeMoreClick = async () => {
     setIsLoading(true);
+    const selectedGenre = genre === "all" ? null : genre;
     const {
       games: responseGames,
       currentPage: responseCurrentPage,
       totalPages: responseTotalPages,
-    } = await getGamesByPageAndGenre(currentPage + 1, genre || null);
+    } = await getGamesByPageAndGenre(currentPage + 1, selectedGenre || null);
     setAllGames([...allGames, ...responseGames]);
     setTotalPages(responseTotalPages);
     setCurrentPage(responseCurrentPage);
