@@ -16,9 +16,10 @@ async function getGamesByPageAndGenre(page: number, genre: string | null) {
 
   const fromIndex = (page - 1) * ITEMS_PER_PAGE;
   const toIndex = page * ITEMS_PER_PAGE;
+  const totalPages = Math.ceil(games.length / ITEMS_PER_PAGE);
+
   games = games.slice(fromIndex, toIndex);
 
-  const totalPages = Math.ceil(games.length / ITEMS_PER_PAGE);
   const currentPage = page;
 
   return { totalPages, currentPage, games };
