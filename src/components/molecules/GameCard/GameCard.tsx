@@ -1,24 +1,28 @@
 "use client";
+
 import { Badge } from "@/components/atoms/Badge";
 import { Button } from "@/components/atoms/Button";
+import { useCartContext } from "@/contexts/CartContext";
+import { Game } from "@/utils/endpoint";
 import clsx from "clsx";
 import Image from "next/image";
 
-type GameProps = {
-  id: string;
-  genre: string;
-  image: string;
-  name: string;
-  price: number;
-  isNew: boolean;
-};
-
-interface GameCardProps<T extends GameProps> {
-  game: T;
+interface GameCardProps {
+  game: Game;
   className?: string;
 }
 
-function GameCard<T extends GameProps>({ game, className }: GameCardProps<T>) {
+function GameCard({ game, className }: GameCardProps) {
+  const { cart, addItem, removeItem } = useCartContext();
+  const isSaved = !!cart[game.id];
+
+  const handleClick = () => {
+    if (isSaved) {
+      removeItem(game);
+      return;
+    }
+    addItem(game);
+  };
   return (
     <div
       className={clsx("flex flex-col gap-y-5 rounded-2xl border border-neutral-750 p-6", className)}
@@ -42,8 +46,12 @@ function GameCard<T extends GameProps>({ game, className }: GameCardProps<T>) {
           <span className="">${game.price}</span>
         </div>
       </div>
-      <Button onClick={() => {}} variant="secondary" className="uppercase">
-        Add to cart
+      <Button
+        onClick={handleClick}
+        variant={isSaved ? "primary" : "secondary"}
+        className="uppercase"
+      >
+        {isSaved ? "Remove" : "Add to cart"}
       </Button>
     </div>
   );

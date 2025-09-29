@@ -4,6 +4,7 @@ import clsx from "clsx";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/organisms/Header";
+import { Providers } from "@/contexts/Providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,8 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={clsx(inter.className)}>
-        <Header />
-        {children}
+        <Providers>
+          <Header />
+          {children}
+        </Providers>
       </body>
     </html>
   );
