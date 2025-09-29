@@ -13,7 +13,7 @@ export default async function Home({ searchParams }: HomeProps) {
   const genre = searchParams.genre;
 
   return (
-    <main className="flex flex-col">
+    <main className="mt-8 flex flex-col 2xl:mt-12">
       <TopSellers />
       <div className="px-6 py-8 2xl:px-32">
         <Suspense key={genre} fallback={<LoadingSkeletons />}>

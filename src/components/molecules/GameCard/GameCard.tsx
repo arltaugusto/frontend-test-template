@@ -23,6 +23,7 @@ function GameCard({ game, className }: GameCardProps) {
     }
     addItem(game);
   };
+
   return (
     <div
       className={clsx("flex flex-col gap-y-5 rounded-2xl border border-neutral-750 p-6", className)}
