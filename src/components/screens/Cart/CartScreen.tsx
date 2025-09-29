@@ -24,7 +24,7 @@ const CartScreen = () => {
         </span>
       </div>
       {!!cartLength && (
-        <div className="flex flex-col 2xl:flex-row 2xl:gap-x-20">
+        <div className="flex flex-col gap-y-12 2xl:flex-row 2xl:gap-x-20 2xl:gap-y-0">
           <GamesInCart />
           <Checkout />
         </div>

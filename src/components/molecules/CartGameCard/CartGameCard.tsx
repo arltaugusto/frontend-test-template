@@ -13,9 +13,9 @@ const CartGameCard = ({ game }: CartGameCardProps) => {
   };
 
   return (
-    <div className="flex w-full gap-x-6 border-b border-b-neutral-750 px-4 py-5 last:border-b-0">
-      <div className="flex w-full gap-x-6">
-        <div className="relative 2xl:h-[156px] 2xl:w-[200px]">
+    <div className="flex w-full border-b border-b-neutral-750 px-4 py-5 last:border-b-0 2xl:gap-x-6">
+      <div className="flex w-full flex-col gap-y-4 2xl:flex-row 2xl:gap-x-6">
+        <div className="relative h-[136px] w-[259px] 2xl:h-[156px] 2xl:w-[200px]">
           <Image loading="lazy" src={game.image} fill alt={game.name + "-image"} />
         </div>
         <div className="flex grow flex-col gap-y-3">
@@ -26,7 +26,7 @@ const CartGameCard = ({ game }: CartGameCardProps) => {
             <span className="text-xl font-bold leading-5 text-neutral-850">{game.name}</span>
             <p className="text-base leading-5 text-neutral-500">{game.description}</p>
           </div>
-          <div className="text-end text-xl font-bold leading-6">${game.price}</div>
+          <div className="mt-14 text-end text-xl font-bold leading-6 2xl:mt-0">${game.price}</div>
         </div>
       </div>
       <button className="h-fit w-fit" onClick={handleRemove(game)}>

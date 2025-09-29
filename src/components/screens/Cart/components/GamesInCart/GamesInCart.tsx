@@ -7,7 +7,7 @@ const GamesInCart = () => {
   const { cart } = useCartContext();
 
   return (
-    <div className="2xl:mt-12">
+    <div className="mt-8 2xl:mt-12">
       {Object.values(cart).map((game) => (
         <CartGameCard game={game} />
       ))}
