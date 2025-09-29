@@ -25,4 +25,34 @@ describe("CartGameCard", () => {
 
     expect(removeItemMock).toHaveBeenCalled();
   });
+
+  it("should render is new badge if game is new", async () => {
+    const newGameMock = {
+      ...mockGame,
+      isNew: true,
+    };
+    jest.mocked(useCartContext).mockReturnValue({
+      cart: {},
+      removeItem: jest.fn(),
+      addItem: jest.fn(),
+    });
+    render(<CartGameCard game={newGameMock} />);
+
+    expect(screen.getByText("New")).toBeInTheDocument();
+  });
+
+  it("should not render is new badge if game is not new", async () => {
+    const newGameMock = {
+      ...mockGame,
+      isNew: false,
+    };
+    jest.mocked(useCartContext).mockReturnValue({
+      cart: {},
+      removeItem: jest.fn(),
+      addItem: jest.fn(),
+    });
+    render(<CartGameCard game={newGameMock} />);
+
+    expect(screen.queryByText("New")).not.toBeInTheDocument();
+  });
 });
