@@ -7,7 +7,8 @@ interface HomeScreenProps {
 }
 
 export default async function HomeScreen({ genre }: HomeScreenProps) {
-  const { totalPages, games, currentPage } = await getGamesByPageAndGenre(1, genre || null);
+  const selectedGenre = genre === "all" ? null : genre;
+  const { totalPages, games, currentPage } = await getGamesByPageAndGenre(1, selectedGenre || null);
 
   return (
     <GamesGrid games={games} initialTotalPages={totalPages} initialCurrentPage={currentPage} />

@@ -4,7 +4,10 @@ import { Dropdown } from "@/components/molecules/Dropdown";
 import { availableFilters } from "@/utils/endpoint";
 import Link from "next/link";
 
-const TopSellers = () => {
+interface TopSellersProps {
+  genre?: string | null;
+}
+const TopSellers = ({ genre }: TopSellersProps) => {
   const allGenres = [{ value: "all", label: "All" }];
   const genres = allGenres.concat(
     availableFilters.map((genre) => ({
@@ -12,6 +15,10 @@ const TopSellers = () => {
       value: genre.replace(" ", "").toLocaleLowerCase(),
     })),
   );
+
+  const startingIndex = genre
+    ? genres.map((gen) => gen.value).indexOf(genre.replace(" ", "").toLocaleLowerCase())
+    : 0;
 
   return (
     <div className="flex w-full flex-col border-b border-b-neutral-450 pb-8">
@@ -24,11 +31,9 @@ const TopSellers = () => {
           <Dropdown
             options={genres}
             className="w-56"
+            defaultOption={startingIndex}
             renderOption={(option) => (
-              <Link
-                className="px-4 py-2 flex w-full h-full"
-                href={option.value === "all" ? "/" : `/?genre=${option.value}`}
-              >
+              <Link className="px-4 py-2 flex w-full h-full" href={`/?genre=${option.value}`}>
                 {option.label}
               </Link>
             )}
