@@ -41,7 +41,7 @@ const GamesGrid = ({ games, initialTotalPages, initialCurrentPage, genre }: Game
 
   return (
     <div className="flex flex-col gap-y-9 2xl:gap-y-12">
-      <div className="flex flex-col gap-y-6 2xl:grid 2xl:grid-cols-3 2xl:place-items-center 2xl:gap-12 2xl:pr-12">
+      <div className="flex flex-col gap-y-6 transition-all 2xl:grid 2xl:grid-cols-3 2xl:place-items-center 2xl:gap-12 2xl:pr-12">
         {allGames.map((game) => (
           <GameCard
             key={game.id}
@@ -50,7 +50,7 @@ const GamesGrid = ({ games, initialTotalPages, initialCurrentPage, genre }: Game
           />
         ))}
       </div>
-      {currentPage <= totalPages && (
+      {currentPage < totalPages && (
         <Button
           onClick={handleSeeMoreClick}
           className="w-full uppercase 2xl:max-w-[137px]"
