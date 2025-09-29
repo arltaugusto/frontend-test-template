@@ -67,7 +67,7 @@ const Dropdown = ({
           {options.map((option, idx) => (
             <li
               key={option.value}
-              className="px-4 py-2 transition-colors hover:bg-neutral-300"
+              className="transition-colors hover:bg-neutral-300"
               onClick={handleOptionClick(option, idx)}
             >
               {renderOption(option)}

@@ -25,7 +25,10 @@ const TopSellers = () => {
             options={genres}
             className="w-56"
             renderOption={(option) => (
-              <Link href={option.value === "all" ? "/" : `/?genre=${option.value}`}>
+              <Link
+                className="px-4 py-2 flex w-full h-full"
+                href={option.value === "all" ? "/" : `/?genre=${option.value}`}
+              >
                 {option.label}
               </Link>
             )}
